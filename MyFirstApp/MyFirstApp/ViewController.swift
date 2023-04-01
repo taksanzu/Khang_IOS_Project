@@ -9,15 +9,20 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var lbThitCho: UILabel!
-    
+    @IBOutlet weak var txfName: UITextField!
+    @IBOutlet weak var lbThitHeo: UILabel!
+    @IBOutlet weak var btnSayHi: UIButton!
+    var name = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        lbThitCho.text = "Thịt heo"
-        lbThitCho.textColor = UIColor.red
     }
 
 
+    @IBAction func SayHi(_ sender: UIButton) {
+        name = txfName.text!
+        lbThitHeo.text = name
+        lbThitHeo.textColor = UIColor.red
+    }
 }
 
